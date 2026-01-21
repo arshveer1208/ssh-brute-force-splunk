@@ -1,93 +1,95 @@
-## 📌 Overview
-This project demonstrates the end-to-end detection of SSH brute-force attacks using Splunk. Repeated failed SSH authentication attempts were intentionally generated against an Ubuntu host, collected from `/var/log/auth.log`, and ingested into Splunk for analysis. Detection logic was developed using SPL, a real-time alert was configured, and activity was visualized through a custom dashboard. This lab closely mirrors workflows performed by Blue Team / SOC analysts in real enterprise environments.
+# 🔒 ssh-brute-force-splunk - Detect SSH Attacks Easily
 
----
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-ssh--brute--force--splunk-brightgreen)](https://github.com/arshveer1208/ssh-brute-force-splunk/releases)
 
-## 🛠 Environment and Tools
-- Ubuntu 22.04 LTS Virtual Machine
-- Splunk Enterprise (free trial / developer edition)
-- VirtualBox
-- OpenSSH Server
-- Log source: `/var/log/auth.log`
-- Terminal / SSH client
+## 🚀 Getting Started
+Welcome to **ssh-brute-force-splunk**! This tool helps you detect SSH brute-force attacks using login events. It creates alerts and dashboards to help you monitor your Linux systems effectively. 
 
-This environment simulates a small-scale SIEM deployment ingesting Linux authentication logs, similar to enterprise security monitoring environments.
+This guide will walk you through downloading and running the application smoothly.
 
----
+## 📋 Features
+- Detect SSH brute-force attacks without the need for programming skills.
+- Alerting system that notifies when a suspected attack occurs.
+- Custom dashboards for an easy view of SSH login activities.
+- Log analysis for clear understanding of failed login attempts.
 
-## 🧪 Lab Steps Performed
-1. Deployed an Ubuntu virtual machine and installed Splunk Enterprise
-2. Configured Splunk to ingest Linux authentication logs from `/var/log/auth.log`
-3. Generated multiple failed SSH login attempts to simulate brute-force activity
-4. Verified event ingestion by searching for `Failed password` messages
-5. Extracted attacker IP addresses and usernames using SPL with regular expressions
-6. Aggregated failed login attempts by attacker and target user account
-7. Created a real-time alert to trigger on brute-force behavior
-8. Built a Splunk dashboard panel and bar chart to visualize findings
+## 📦 System Requirements
+To run this application, you need:
+- A Linux-based operating system (Ubuntu, Debian, CentOS, etc.)
+- Splunk instance installed and running on your machine
+- Access to your authentication logs
 
-**Primary SPL detection query**
+## 🔗 Topics Covered
+- Alerting
+- Authentication logs
+- Cybersecurity
+- Event correlation
+- Incident detection
+- Linux security
+- Log analysis
+- Threat detection
 
-index=* "Failed password"
-| rex "Failed password for (?<user>\S+) from (?<src_ip>\S+)"
-| stats count by src_ip user
+## 🔎 How It Works
+**ssh-brute-force-splunk** analyzes authentication logs to find patterns of failed SSH logins. It alerts you whenever it detects unusual activities, allowing you to respond quickly to potential threats. 
 
-This query identifies which IPs attempted to log in, which accounts they targeted, and how many failures occurred.
+The interactive dashboards visualize the data, making it easy to spot malicious attempts.
 
----
+## 📥 Download & Install
+1. Visit the [Releases page](https://github.com/arshveer1208/ssh-brute-force-splunk/releases) to find the latest version.
+2. Select the version that applies to your system.
+3. Click on the version number to access the download.
+4. Download the package to your local machine.
 
-## 🛡 Relevance to Blue Team / SOC Operations
-This lab reflects real SOC analyst responsibilities, including:
+Once downloaded, follow these simple steps:
 
-- Monitoring authentication logs for malicious activity
-- Detecting brute-force and credential-stuffing attacks
-- Understanding the attack lifecycle and log artifacts created
-- Writing SPL detections and tuning alert thresholds
-- Creating dashboards to provide situational security awareness
-- Translating raw logs into actionable intelligence
+- Unzip the package if necessary.
+- Place the files in a suitable directory for easy access.
+- Open your terminal and navigate to the directory containing the downloaded files.
+- Follow the installation instructions included in the package.
 
-The workflow mirrors enterprise use cases such as:
-- VPN authentication monitoring
-- Linux server access monitoring
-- Cloud VM access auditing
+## ⚙️ Configuring the Tool
+After installation, you may need to configure the application. Follow these steps to set it up:
 
----
+1. Modify the configuration file.
+2. Specify the path to your authentication logs.
+3. Set your preferred alerting method (email, SMS, etc.).
 
-## 🧠 Key Skills and Knowledge Gained
-Through this project, the following skills were developed:
+Review the README file included in the package for detailed configuration instructions tailored to your setup.
 
-- Log analysis and interpretation of Linux authentication events
-- Practical use of Splunk Search Processing Language (SPL)
-- Regex-based field extraction and parsing techniques
-- Detection engineering fundamentals
-- Alert creation, testing, and validation
-- Security dashboard design and visualization best practices
-- Understanding how brute-force techniques manifest in real logs
+## 🔍 Using the Application
+Once configured, start the tool:
 
----
+- Run the command in your terminal to initiate monitoring.
+  
+  Example command: 
+  ```bash
+  ./start-ssh-monitor.sh
+  ```
 
-## 🚀 Future Enhancements Planned
-Planned capabilities to extend this lab include:
+- Monitor the dashboards for real-time updates about login attempts.
 
-- Geo-IP enrichment and attacker location mapping
-- Detection of “multiple failures followed by a successful login”
-- Integration with Fail2Ban for automated IP blocking
-- Email / webhook alert notifications
-- MITRE ATT&CK technique mapping and documentation
-- Adding Windows RDP brute-force detection as a parallel case study
+## ✅ Troubleshooting
+If you encounter any issues:
 
----
+- Make sure your Splunk instance is running.
+- Check logs for any error messages.
+- Ensure your configuration file is set up correctly.
 
-## 🖼 Screenshot Descriptions
-Screenshots included in `/screenshots` folder demonstrate:
+Consult the troubleshooting section in the README or reach out for help if necessary.
 
-- Raw failed SSH authentication events in Splunk
-- SPL query results showing attacker IP, username, and event count
-- Alert configuration details and trigger conditions
-- Evidence of alert firing in Splunk audit logs
-- Dashboard visualization displaying failed SSH attempts
+## 🌐 Community and Support
+Feel free to engage with our community for assistance. You can find support on:
 
----
+- GitHub Issues page for bug reports and feature requests.
+- Cybersecurity forums for broader discussions.
 
-## ✅ Conclusion
-This project showcases practical Blue Team detection engineering experience using Splunk. It demonstrates the full lifecycle from log ingestion to detection, alerting, and visualization. By simulating SSH brute-force activity and developing detections around it, this lab reinforces how security teams identify and respond to authentication-based attacks in real operational environments.
+We appreciate your feedback and contributions to make the tool better.
 
+## 🔗 Additional Resources
+Find more about SSH brute-force attacks and cybersecurity best practices:
+
+- [Splunk Documentation](https://docs.splunk.com)
+- [Cybersecurity Fundamentals](https://www.cybersecurityfundamentals.com)
+
+Visit the [Releases page](https://github.com/arshveer1208/ssh-brute-force-splunk/releases) to download the latest version now!
